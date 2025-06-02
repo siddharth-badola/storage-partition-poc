@@ -1,0 +1,18 @@
+{
+  "name": "storage-share-poc",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:wrapper": "vite build --mode wrapper-app --config vite.wrapper-app.config.js",
+    "dev:all": "concurrently \"vite --config vite.config.js\" \"vite --config vite.wrapper-app.config.js\" --mode wrapper-app",
+    "build:all": "yarn build && yarn build:wrapper"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "vite": "^6.3.5"
+  }
+}

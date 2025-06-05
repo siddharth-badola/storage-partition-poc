@@ -54,3 +54,7 @@ document.getElementById("ls-msg").onclick = () => {
   localStorage.setItem(STORAGE_KEY, null);
   localStorage.setItem(STORAGE_KEY, JSON.stringify({ type: "ls", payload: `🎲 Game update at ${new Date().toLocaleTimeString()}` }));
 };
+
+document.getElementById("open-tab-safe").addEventListener("click", () => {
+  window.open(import.meta.env.VITE_WRAPPER_APP_URL + "/wrapperApp.html?nested=1", "_blank", "width=800,height=600");
+});
